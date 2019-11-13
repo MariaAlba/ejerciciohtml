@@ -1,0 +1,65 @@
+<!DOCTYPE html> <!--html5-->
+<html lang="es"> <!--lang es atributo "es"/"en" son valores-->
+<head>
+    <meta charset="UTF-8">  <!--juego de caracteres-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--importante responsive-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inicio</title>
+    <base href="/pruebatecnica/"> 
+    <link rel="icon" 
+      type="image/png" 
+      href="images/html5.png">
+    <!--estilos-->
+    <link rel="stylesheet" href="css/styles.css">
+  
+</head>
+<body>
+    
+    <a href="index.html">Volver</a>
+        
+    <h1>Css Básico</h1>
+    <h2>Ejemplo de especificidad de los CSS</h2>
+    <p>Inspeccionar con las herramientas de desarrolladoe y ver los CSS de los párrafos.</p>
+    <div class="separador">
+
+    </div>  
+    <p style="color:rebeccapurple; font-size: 20px;">
+        Esto es un párrafo que tiene un estilo en linea. (que no hay que hacer pq es suspenso)
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima impedit odit nobis sapiente molestias labore est maxime fugiat doloribus modi? Similique ex quo molestiae, deserunt neque harum quod libero error!</p>
+    <p class="texto-verde super-importante">Et natus aut itaque ex non cumque quam alias, esse maxime iusto autem totam nisi ratione delectus rem aperiam quidem vitae distinctio, reiciendis fuga temporibus fugiat sunt, dicta consequuntur! Eos?</p>
+    <p>Tempore, repellendus delectus, ex velit facere consequatur reiciendis iure ad quia nihil vero doloremque impedit iste. Eum tempora nisi, magnam iusto corrupti accusantium asperiores ut assumenda facilis illum dignissimos sit.</p>
+    <p>Exercitationem repudiandae amet reprehenderit neque deleniti vero asperiores impedit voluptates error natus nesciunt ab numquam, necessitatibus assumenda culpa est in. Ipsum hic esse veniam natus praesentium maxime quasi, alias fugit.</p>
+    <p>Facilis repellat consequatur minima maiores temporibus ducimus incidunt? Natus aperiam repudiandae repellendus corrupti soluta ipsum, ducimus sed nemo non ullam nostrum vel in officia voluptate eum architecto nesciunt aspernatur deleniti.</p>
+   
+    <h2>Tipos de selectores</h2>
+    <p>En este vídeo puedes ver los tipos de selectores, identificadores, clases y pseudoclases:Videotutorial </p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ARaU6uGOa_k" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe>
+  
+
+    <style>
+    /*Se puede poner css dentro de html pero no es recomendable*/
+    
+    .texto-verde{color:green;}
+    
+    .super-importante {
+        color: lightblue !important; /*es la más específica*/
+    }
+
+    p{
+
+        color:teal !important;
+    }
+
+
+    </style>
+
+
+
+
+    <script src="js/main.js"></script>
+</body>
+</html>
