@@ -108,3 +108,6 @@ td:hover{
 #imagen{ text-align: left;}
 
 .tachado { text-decoration: line-through;}
+
+ul{margin:2em 0em;}
+ul li{display: inline-block;}
