@@ -11,7 +11,7 @@
 /* reset basico para eliminar estilos de todos los browser - user-agent */
 *{
     margin: 0;
-    padding: 0;
+   /* padding: 0;*/
 }
 
 body{
@@ -99,3 +99,12 @@ td:hover{
     background-color: #0099CC;  
     animation: mymove 2s infinite alternate;
 }
+
+#enlaces, #listas, #boton, #parrafos, #video, #pym, #cyp, #imagen {
+    margin:1em auto;
+    border:1px solid black;
+    padding:0.5em;
+}
+#imagen{ text-align: left;}
+
+.tachado { text-decoration: line-through;}

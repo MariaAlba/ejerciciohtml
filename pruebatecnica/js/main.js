@@ -18,7 +18,12 @@ console.info("esto es info"); */
 //console.error("Error");
 //console.log("tipo log")
 
+function hacerAlgo (){
+    let colores = ["red","green","orange","blue","white"];
+    let randomColor = colores[Math.floor(Math.random()*colores.length)];
 
+    document.querySelector("body").style.backgroundColor = randomColor;
+}
 
 
 function buscarVoluntario(){
