@@ -21,8 +21,16 @@
         }
         
         /*selector adyacente*/
+        article h1 {color: black;}
         article h2 { color: green; }
-        article h1 + article h2 { color: red }
+        article h1 + h2 { color: red }
+
+        article ul{
+            list-style:circle;
+            padding-left: 1.5em;
+        }
+        article ul li {display:block;}
+        article ul li::before{content:"*"}
     </style>
 </head>
 
@@ -83,7 +91,26 @@
 
         <article>
             <h3>Selector de atributos</h3>
-
+            <p>
+                Permiten seleccionar elementos HTML en función de sus atributos y/o valores de esos atributos.
+                Hay cuatro tipos:
+            </p>
+            <ul>
+                <li>
+                    <code>[nombre_atributo]</code>
+                </li>
+                <li><code>[nombre_atributo=valor]</code></li>   
+                <li>
+                    <code>[nombre_atributo~=valor]</code>
+                    al menos uno de los valores del atributo es valor.
+                </li>  
+                <li>
+                    <code>[nombre_atributo|=valor]</code>
+                    valor es una serie de palabras separadas con guiones, pero que comienza con valor. 
+                    Este tipo de selector sólo es útil para los atributos de tipo lang 
+                    que indican el idioma del contenido del elemento.
+                </li>   
+            </ul>
         </article>
     </section>
 
