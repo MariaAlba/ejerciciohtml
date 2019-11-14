@@ -5,111 +5,45 @@
   @version: 1.0
   @tags: css, basic, etc..
   @licencia: mit
-  
+  ...
 */
 
 /* reset basico para eliminar estilos de todos los browser - user-agent */
 *{
     margin: 0;
-   /* padding: 0;*/
+    padding: 0;
 }
 
+/*
+* Estilos generales
+*/
 body{
     font-size: 16px;
-    font-family: Arial, sans-serif;
-   
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 h1{
     color: #09C;
     font-size: 3em;
     text-align: center;
-
 }
 
 h1 , h2, h3, h4, h5, h6 {
     text-align: center;
 }
-
-
-
-
-table{
-    width: 50%;
-    margin: auto;
-}
-
-td{
-    width: 50%; 
-    border:1px solid #000;     /* shorthand */
-
-    /*
-    border-width: 1px;
-    border-color: #000;
-    border-style: solid;
-    */
-
-    text-align: center;
-    text-transform: capitalize;
-}
-
-td:hover{
-    background-color: pink;
-}    
-
-.parallax{
-
-  background-image: url(/pruebatecnica/images/damian-zaleski-RYyr-k3Ysqg-unsplash.jpg);  
-
-  /* Set a specific height */
-  height: 500px;
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.parallax h1{    
-    padding-top: 4em;
-}
-.parallax h2{
-    padding-top: 0.5em;
-}
-
-@keyframes mymove {
-    from {
-        background-color: #0099CC;  
-        border-radius: 0;
-       
-    }
-    to {
-        background-color:red;  
-        border-radius: 50%;
-       
-    }
-  }
-
-.box-animacion{ 
-
-    display: inline-block;
-    width: 150px;
-    height: 150px;
-    background-color: #0099CC;  
-    animation: mymove 2s infinite alternate;
-}
-
-#enlaces, #listas, #boton, #parrafos, #video, #pym, #cyp, #imagen {
+   
+h2,h3{
     margin:1em auto;
-    border:1px solid black;
-    padding:0.5em;
 }
-#imagen{ text-align: left;}
 
-.tachado { text-decoration: line-through;}
+a{text-decoration: none;}
 
-ul{margin:2em 0em;}
-ul li{display: inline-block;}
+p{
+    text-align: justify;
+    padding: 0.5em 2em;
 
-p{color:orange;}
+}
+
+
+
+

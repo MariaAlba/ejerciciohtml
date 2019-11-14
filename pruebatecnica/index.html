@@ -1,39 +1,105 @@
-<!DOCTYPE html> <!--html5-->
-<html lang="es"> <!--lang es atributo "es"/"en" son valores-->
+<!DOCTYPE html>
+<!--html5-->
+<html lang="es">
+<!--lang es atributo "es"/"en" son valores-->
+
 <head>
-    <meta charset="UTF-8">  <!--juego de caracteres-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--importante responsive-->
+    <meta charset="UTF-8">
+    <!--juego de caracteres-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--importante responsive-->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Inicio</title>
-    <base href="/pruebatecnica/"> 
-    <link rel="icon" 
-      type="image/png" 
-      href="images/html5.png">
+    <base href="/pruebatecnica/">
+    <link rel="icon" type="image/png" href="images/html5.png">
     <!--estilos-->
     <link rel="stylesheet" href="css/styles.css">
-  
+
+    <style>
+ 
+        table {
+            width: 50%;
+            margin: auto;
+        }
+
+        td {
+            width: 50%;
+            border: 1px solid #000;
+            /* shorthand */
+            text-align: center;
+            text-transform: capitalize;
+        }
+
+        td:hover {
+            background-color: pink;
+        }
+
+        .parallax {
+
+            background-image: url(/pruebatecnica/images/damian-zaleski-RYyr-k3Ysqg-unsplash.jpg);
+
+            /* Set a specific height */
+            height: 500px;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .parallax h1 {
+            padding-top: 4em;
+        }
+
+        .parallax h2 {
+            padding-top: 0.5em;
+        }
+
+        nav
+        {
+            background-color:#0099CC;
+            padding:0.5em;
+        }
+
+        nav ul {
+            text-align: center;
+
+        }
+
+        nav ul li a{
+         
+            color:white;
+            padding:0.5em 1em;
+        }
+    </style>
 </head>
+
 <body>
-    
-    
 
     <div class="parallax">
         <h1> Prueba técnica </h1>
-        <h2> Welcome to HTML </h2>   
+        <h2> Welcome to HTML </h2>
     </div>
 
     <nav>
-        <a href="ejemplos/css/animaciones.html">Animaciones</a>
-        <a href="ejemplos/html/etiquetas-basicas.html">Etiquetas básicas</a>
-        <a href="ejemplos/css/basico.html">CSS Básico</a>
+        <ul>
+            <li>
+                <a href="ejemplos/css/animaciones.html">Animaciones</a>
+                <a href="ejemplos/html/etiquetas-basicas.html">Etiquetas básicas</a>
+                <a href="ejemplos/css/especificidad.html">Especificidad</a>
+                <a href="ejemplos/css/selectores-basicos.html">Selectores básicos</a>
+                <a href="ejemplos/css/selectores-avanzados.html">Selectores avanzados</a>
+            </li>
+        </ul>
     </nav>
 
     <div class="fondo">
-        <h2> Alumnos Ipartek</h2>    
+        <h2> Alumnos Ipartek</h2>
         <p><a target="_blank" href="https://www.w3schools.com/html/html_tables.asp">Documentación w3 schools</a></p>
         <h3> Voluntario <span id="nombre">X</span></h3>
         <p><button onclick="buscarVoluntario()">¿Quién lee?</button></p>
-        
+
         <table>
             <caption>Alumnos</caption>
             <thead></thead>
@@ -72,12 +138,15 @@
                 </tr>
             </tbody>
             <tfoot>
-                <tr><th colspan="2">Ander</th></tr>
+                <tr>
+                    <th colspan="2">Ander</th>
+                </tr>
             </tfoot>
         </table>
     </div>
-    
+
     <div class="parallax"></div>
     <script src="js/main.js"></script>
 </body>
+
 </html>

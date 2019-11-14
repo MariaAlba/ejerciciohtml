@@ -1,29 +1,77 @@
-<!DOCTYPE html> <!--html5-->
-<html lang="es"> <!--lang es atributo "es"/"en" son valores-->
+<!DOCTYPE html>
+<!--html5-->
+<html lang="es">
+<!--lang es atributo "es"/"en" son valores-->
+
 <head>
-    <meta charset="UTF-8">  <!--juego de caracteres-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--importante responsive-->
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
-    <base href="/pruebatecnica/"> 
-    <link rel="icon" 
-      type="image/png" 
-      href="images/html5.png">
+    <meta charset="UTF-8">
+    <!--juego de caracteres-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--importante responsive-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <base href="/pruebatecnica/">
+    <link rel="icon" type="image/png" href="images/html5.png">
     <title>Etiquetas básicas</title>
-   
+
     <!--estilos-->
     <link rel="stylesheet" href="css/styles.css">
-  
+    <style>
+        #enlaces,
+        #listas,
+        #boton,
+        #parrafos,
+        #video,
+        #pym,
+        #cyp,
+        #imagen {
+            margin: 1em auto;
+            border: 1px solid black;
+            padding: 0.5em;
+        }
+
+        #imagen {
+            text-align: left;
+        }
+
+        .tachado {
+            text-decoration: line-through;
+        }
+
+        p {
+            color: orange;
+        }
+
+        ul {
+            width: 100%;
+            margin: 2em 0em;
+            padding: 1em 0em;
+            background-color: #0099CC;
+            text-align: center;
+        }
+
+        ul li {
+            display: inline-block;
+        }
+
+        ul li a {
+            padding: 0.5em 1em;
+            color:white;
+            border:1px solid white;
+            border-radius:3px;
+        }
+    </style>
 </head>
+
 <body>
 
-    <noscript >
-       <p>Por favor active JavaScript en su navegador para ver el contenido</p> 
+    <noscript>
+        <p>Por favor active JavaScript en su navegador para ver el contenido</p>
     </noscript>
-    
+
     <a href="index.html">Volver</a>
 
     <h1>Ejercicio de etiquetas básicas</h1>
-    
+
     <!--lista desordenada-->
     <ul>
         <li> <a href="ejemplos/html/etiquetas-basicas.html#listas"> Listas</a></li>
@@ -44,9 +92,9 @@
         <br>
         <a href="mailto:formacionjee@gmail.com?Subject=Etiquetas">Enlace de mail</a>
     </div>
- 
+
     <h2>Listas</h2>
-    <div id="listas" >
+    <div id="listas">
         <!--lista ordenada-->
         <ol>
             <li> item 1</li>
@@ -55,7 +103,7 @@
             <li> item 4</li>
             <li> item 5</li>
         </ol>
-         
+
         <!--lista definiciones-->
         <dl>
             <dt>término</dt>
@@ -69,7 +117,7 @@
 
     <h2>Botón</h2>
     <div id="boton">
-         <!--boton con funcion-->
+        <!--boton con funcion-->
         <button onclick="hacerAlgo()">Boton</button>
     </div>
 
@@ -77,20 +125,28 @@
     <div id="parrafos">
         <!--5 párrafors-->
         <p class="tachado">Esto es un ejemplo de texto tachado con css</p>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit optio quidem, hic nisi rem ipsum blanditiis maxime? Tempore fugit dolore cupiditate quidem sunt, facilis, delectus, eius reiciendis accusantium unde facere!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi maxime error expedita dolorum facere enim, reiciendis incidunt assumenda ad commodi illum eum cumque optio quam similique placeat sed asperiores. Animi.</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo, impedit? Ipsa, repellat inventore sapiente dolorum dignissimos quibusdam praesentium magni, sequi eaque laborum nam dolor. Autem unde consequuntur cumque corrupti eum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui eum, adipisci assumenda beatae vero veritatis neque expedita officiis animi reprehenderit sint ipsum asperiores ad ratione perferendis, velit facilis iure quis.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit optio quidem, hic nisi rem ipsum
+            blanditiis maxime? Tempore fugit dolore cupiditate quidem sunt, facilis, delectus, eius reiciendis
+            accusantium unde facere!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi maxime error expedita dolorum facere enim,
+            reiciendis incidunt assumenda ad commodi illum eum cumque optio quam similique placeat sed asperiores.
+            Animi.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo, impedit? Ipsa, repellat inventore sapiente
+            dolorum dignissimos quibusdam praesentium magni, sequi eaque laborum nam dolor. Autem unde consequuntur
+            cumque corrupti eum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui eum, adipisci assumenda beatae vero veritatis
+            neque expedita officiis animi reprehenderit sint ipsum asperiores ad ratione perferendis, velit facilis iure
+            quis.</p>
     </div>
 
-    <h2> Etiquetas  progress y meter</h2>
+    <h2> Etiquetas progress y meter</h2>
     <div id="pym">
         <h3>Etiqueta meter</h3>
         <meter value="2" min="0" max="10">2 de 10</meter>
         <h3>Etiqueta progress</h3>
-        <progress value="22" max="100"></progress> 
+        <progress value="22" max="100"></progress>
     </div>
-    
+
     <h2>Función del botón para pre y code</h2>
     <!--ejemplo de code y pre-->
     <div id="cyp">
@@ -102,13 +158,12 @@
         }
         </pre></code>
     </div>
-    
+
     <h2>Video con iframe</h2>
     <div id="video">
         <!--Iframe con video de youtube-->
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/nhNq2kIvi9s" 
-        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/nhNq2kIvi9s" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
     <h2>Imagen</h2>
@@ -116,8 +171,9 @@
         <!--imagen con alt-->
         <img src="images/html5-cheat-sheet.png" alt="cheatsheet de etiquetas html5" width="560" height="315">
     </div>
-    
+
 
     <script src="js/main.js"></script>
 </body>
+
 </html>
