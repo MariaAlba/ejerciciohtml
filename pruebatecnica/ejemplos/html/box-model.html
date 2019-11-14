@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--html5-->
+<html lang="es">
+<!--lang es atributo "es"/"en" son valores-->
+
+<head>
+    <meta charset="UTF-8">
+    <!--juego de caracteres-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--importante responsive-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Box model</title>
+    <base href="/pruebatecnica/">
+    <link rel="icon" type="image/png" href="images/html5.png">
+    <!--estilos-->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        body {
+            padding: 50px;
+        }
+
+        p.prueba {
+            color: teal;
+            border: 5px solid orange;
+            margin: 10px;
+            /*short-hand para los 4 lados*/
+            padding: 20px;
+            /* padding:5px 20px 50px;*/
+            /*shorthand para  2 lados (arriba y abajo)  y (derecha e izquierda)*/
+            /*regla TRouBLe*/
+        }
+
+        p.ejemplo {
+            border: 1px solid blue;
+            padding: 5px;
+            margin: 1em 0em;
+        }
+
+        span {
+            border: 3px dotted red;
+            padding: 5px;
+
+        }
+
+        dl,
+        dd {
+            padding-left: 2em;
+        }
+
+        .box {
+            display: inline-block;
+            box-sizing: border-box;
+            width: 100px;
+            height: 100px;
+
+            background-color: royalblue;
+            border: 2px solid teal;
+            border-radius: 10px;
+
+            color: white;
+            text-align: center;
+            font-size: 80px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <a href="index.html">Volver</a>
+
+    <h1>Box Model</h1>
+    <p class="prueba">Toda etiqueta html tiene el comportamiento de boxmodel o una estructura de caja</p>
+
+
+    <!--buscar imagen del box model y pegarla-->
+    <!--cada ejemplo dentro de una section-->
+
+    <section>
+        <h2>Elementos en línea o en bloque</h2>
+
+        <p>
+            <code>display</code> es el atributo para gestionar si es línea o bloque.
+            Existen más displays: por ejemplo flex.
+        </p>
+
+        <p>*trick* usar el inspector para verlo</p>
+
+        <dl>
+            <dt>block</dt>
+            <dd>Elemento que ocupa todos el ancho del elemento padre</dd>
+            <dt>inline</dt>
+            <dd>Elemento que ocupa lo que tenga su contenido</dd>
+            <dt>inline-block</dt>
+            <dd>Es una cosa híbrida de las dos anteriores</dd>
+        </dl>
+
+        <p class="ejemplo">Elemento de bloque </p>
+
+        <span>Elemento de linea</span>
+
+        <p>Ejemplo de inline-block</p>
+        <div class="box">1</div>
+        <div class="box">2</div>
+    </section>
+
+    <section>
+        <h2>Overflow</h2>
+    </section>
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

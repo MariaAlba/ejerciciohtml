@@ -1,30 +1,108 @@
-<!DOCTYPE html> <!--html5-->
-<html lang="es"> <!--lang es atributo "es"/"en" son valores-->
+<!DOCTYPE html>
+<!--html5-->
+<html lang="es">
+<!--lang es atributo "es"/"en" son valores-->
+
 <head>
-    <meta charset="UTF-8">  <!--juego de caracteres-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--importante responsive-->
+    <meta charset="UTF-8">
+    <!--juego de caracteres-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--importante responsive-->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Inicio</title>
-    <base href="/pruebatecnica/"> 
-    <link rel="icon" 
-      type="image/png" 
-      href="images/html5.png">
+    <base href="/pruebatecnica/">
+    <link rel="icon" type="image/png" href="images/html5.png">
     <!--estilos-->
     <link rel="stylesheet" href="css/styles.css">
-   
-</head>
-<body>
-    
-    <a href="index.html">Volver</a>
+    <style>
+        /*selector de hijos*/
+        p>span {
+            color: red;
+        }
         
+        /*selector adyacente*/
+        article h2 { color: green; }
+        article h1 + article h2 { color: red }
+    </style>
+</head>
+
+<body>
+
+    <a href="index.html">Volver</a>
+
     <h1>Selectores Avanzados</h1>
+    <a href="https://caniuse.com/">Can I Use</a>
+
+    <section>
+        <h2>Ejemplos de selectores</h2>
+        <article>
+            <h3>Selector de hijos</h3>
+            <p>
+                Se trata de un selector similar al selector descendente, pero muy diferente en su funcionamiento.
+                Se utiliza para seleccionar un elemento que es hijo directo de otro elemento
+                y se indica mediante el "signo de mayor que" (>):
+            </p>
+            <p>Con este código se vería así:</p>
+            <pre>
+                <code>
+                 p > span { color: red; }
+                &lt;p&gt;&lt;span&gt;Texto1&lt;/span&gt;&lt;/p&gt;
+                &lt;p&gt;&lt;pre&gt;&lt;span&gt;Texto2&lt;/span&gt;&lt;/pre&gt;&lt;/p&gt;
+                </code>
+            </pre>
+            <p><span>Texto1</span></p>
+            <p><pre><span>Texto2</span></pre> </p>
+        </article>
+
+        <article>
+            <h3>Selector adyacente</h3>
+            <p>
+                El selector adyacente se emplea para seleccionar elementos que en el código HTML de la página 
+                se encuentran justo a continuación de otros elementos. 
+                Su sintaxis emplea el signo + para separar los dos elementos
+            </p>
+            <p>Con este código se vería así:</p>
+            <pre>
+                <code>
+                    h2 { color: green; }
+                    h1 + h2 { color: red }
+                    &lt;h1&gt;Titulo1&lt;/h1&gt;
+                    &lt;h2&gt;Subt&iacute;tulo&lt;/h2&gt;
+                    ...
+                    &lt;h2&gt;Otro subt&iacute;tulo&lt;/h2&gt;
+                    ... 
+                </code>
+            </pre>
+            <h1>Titulo1</h1>
+            <h2>Subtítulo</h2>
+            ...
+            <h2>Otro subtítulo</h2>
+            ...
+
+        </article>
+
+        <article>
+            <h3>Selector de atributos</h3>
+
+        </article>
+    </section>
+
+    <section>
+        <h2>Pseudoselectores</h2>
+        <h3>:first-letter</h3>
+        <h3>:first-line</h3>
+    </section>
+
+    <section>
+        <h2>Pseudoclases</h2>
+    </section>
 
 
-  
 
 
 
 
     <script src="js/main.js"></script>
 </body>
+
 </html>
