@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Posicionamiento</title>
+    <link rel="stylesheet" href="/pruebatecnica/css/styles.css">
+    <style>
+        body {
+            padding: 50px;
+        }
+
+        .contenedor {
+            position: relative;
+            border: 1px solid black;
+            height: 400px;
+            width: 400px;
+            margin: auto;
+            overflow: hidden;
+            transition: all 10s;
+        }
+
+       
+        .bloque {
+            border: 1px dotted blue;
+            background-color: lightskyblue;
+            height: 100px;
+            padding: 0.5em;
+        }
+
+        .linea {
+            border: 1px dashed red;
+            height: 50px;
+            width: 50px;
+        }
+
+        .absoluto {
+            /*posicionamos de forma absoluta sobre el contenedor*/
+            border-radius: 50%;
+            background-color: red;
+            padding: 10px 15px;
+            color: white;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+        .contenedor .texto {
+            background-color: rgba(0,0,0,0.36);
+            color:white;
+            position:absolute;
+            bottom: -110px;
+            transition: all 10s;
+        }
+
+        .contenedor .texto h3 {
+            text-transform: uppercase;
+        }
+
+        .contenedor .texto p{
+            text-align: justify;
+            padding: 0.5em;
+        }
+        .contenedor .texto:hover{
+            bottom:40%;
+            transition: all 10s;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="/pruebatecnica/index.html">Volver</a>
+    <h1>Posicionamiento</h1>
+    <section>
+        <h2>Static</h2>
+        <p>Por defecto el navegador posiciona los elementos de forma <code>static</code></p>
+        <div class="contenedor"> contenedor
+            <div class="bloque"> bloque
+                <span class="linea">linea</span>
+                <span class="linea">linea</span>
+            </div>
+            <span class="linea">linea</span>
+        </div>
+    </section>
+    <section>
+        <h2>Relative</h2>
+        <p>El desplazamiento de la caja se controla con las propiedades:
+            <code> top, right, bottom y left</code> </p>
+        <div class="contenedor">
+            <div class="bloque" style="position: relative; top:50%;">
+                posicion relativa al contenedor <code>top:50%;</code>
+                <span class="linea">posicion estática</span>
+                <span class="linea">posicion relativa al bloque</span>
+            </div>
+            <span class="linea">posicion relativa al contenedor</span>
+        </div>
+    </section>
+    <section>
+        <h2>Absolute</h2>
+        <p>La posición de una caja se establece de forma absoluta <b>respecto de su elemento contenedor </b>
+            y el resto de elementos de la página ignoran la nueva posición del elemento.</p>
+        <p>El desplazamiento de la caja también se controla con las propiedades
+            <code>top, right, bottom y left</code> pero el origen de coordenadas
+            del desplazamiento depende del posicionamiento de su elemento contenedor.
+        </p>
+        <p>El contenedor siempre tiene que ser <code>relative</code> </p>
+        <div class="contenedor">
+            <span class="absoluto">1</span>
+            <img src="http://lorempixel.com/g/400/400/" alt="imagen de contador">
+
+            <div class="texto">
+                <h3>título</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil mollitia minus facere quibusdam
+                    pariatur omnis fugiat temporibus dolorum aut reiciendis placeat voluptatum repellendus a ullam, quam
+                    sequi dolores modi. Libero.</p>
+            </div>
+
+        </div>
+    </section>
+    <section>
+        <h2>Fixed</h2>
+        <p>El desplazamiento se establece de la misma forma que en el posicionamiento absoluto,
+            pero en este caso el elemento permanece inamovible en la pantalla
+        </p>
+    </section>
+    <section>
+        <h2>Sticky</h2>
+        <p>
+            Es tratado como un elemento posicionado relativamente
+            hasta que su bloque contenedor cruza un límite establecido
+            (como por ejemplo dando a top cualquier valor distinto de auto),
+            dentro de su flujo principal (o el contenedor dentro del cual se mueve),
+            punto en el cual es tratado como "fijo"
+            hasta que alcance el borde opuesto de su bloque contenedor.
+        </p>
+    </section>
+</body>
+
+</html>
