@@ -66,12 +66,25 @@
             bottom:40%;
             transition: all 10s;
         }
+
+        .return{
+            display: inline-block;
+            width:25px;
+            height:25px;
+            position:fixed;
+            bottom:1em;
+            right:1em;
+            border-radius: 50%;
+            background-color: cornflowerblue;
+            color:coral;
+        }
+
     </style>
 </head>
 
 <body>
     <a href="/pruebatecnica/index.html">Volver</a>
-    <h1>Posicionamiento</h1>
+    <h1 id="top">Posicionamiento</h1>
     <section>
         <h2>Static</h2>
         <p>Por defecto el navegador posiciona los elementos de forma <code>static</code></p>
@@ -107,8 +120,8 @@
         <p>El contenedor siempre tiene que ser <code>relative</code> </p>
         <div class="contenedor">
             <span class="absoluto">1</span>
-            <img src="http://lorempixel.com/g/400/400/" alt="imagen de contador">
-
+            <img src="https://picsum.photos/400/400/" alt="imagen de contador">
+            
             <div class="texto">
                 <h3>título</h3>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil mollitia minus facere quibusdam
@@ -121,8 +134,9 @@
     <section>
         <h2>Fixed</h2>
         <p>El desplazamiento se establece de la misma forma que en el posicionamiento absoluto,
-            pero en este caso el elemento permanece inamovible en la pantalla
+            pero en este caso el elemento permanece inamovible en la pantalla.
         </p>
+        <p>Ver por ejemplo el botón de volver arriba.</p>
     </section>
     <section>
         <h2>Sticky</h2>
@@ -134,7 +148,15 @@
             punto en el cual es tratado como "fijo"
             hasta que alcance el borde opuesto de su bloque contenedor.
         </p>
+        <p>
+            Ver por ejemplo el menú del index
+            <a href="/pruebatecnica/index.html">Index</a>
+        </p>
     </section>
+
+    <span class="return"> 
+        <a href="/pruebatecnica/ejemplos/html/posicionamiento.html#top">Up</a>
+    </span>
 </body>
 
 </html>
