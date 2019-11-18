@@ -8,10 +8,14 @@
     <link rel="stylesheet" href="/pruebatecnica/css/styles.css">
 
     <style>
+     
         body {
             max-width: 1024px;
+            height:100vh;
             margin:auto;
-            background-color:#2196F3;
+            background: #56CCF2;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to bottom, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to bottom, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         }
         
         form {
@@ -64,11 +68,10 @@
         .remember{color:#777977;font-size: 13.3333px;}
         
         #ver{
-            padding: 5px;
-            font-size: 20px;
             color: #239af9;
             border: none;
-            background: transparent;
+            background-repeat: no-repeat;
+            background-size: contain;
         }
     </style>
 
@@ -95,7 +98,8 @@
                 placeholder="Contraseña"
                 required
                 pattern=".{4,10}">
-            <button id="ver" onclick="verTexto(event)">☉</button>
+            <button id="ver" onclick="verTexto(event)"> 
+            </button>
         <br><br>
 
         <script>
@@ -108,7 +112,7 @@
                 
                 if(icontrasena.type == "text"){
                     icontrasena.type = "password";
-                    e.target.innerHTML = '☉';
+                    e.target.innerHTML = 'Ver';
                 }
                 else {
                     icontrasena.type = "text";
