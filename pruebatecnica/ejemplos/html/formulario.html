@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="/pruebatecnica/css/styles.css">
+
+    <style>
+        body {
+            max-width: 1024px;
+            margin:auto;
+                    }
+        form {
+            border:1px solid #000;
+            padding: 20px;
+            }
+    </style>
+
+</head>
+<body>
+    <h1>Formulario</h1>
+    <p>
+        <small>*sobre todo usaremos selectores de atributos*</small>
+    </p>
+    
+    <p>Los formularios suelen servir para enviar datos al servidor </p>
+    <p>Usar siempre etiqueta <code>&lt;form&gt; &lt;/form&gt;</code> con boton de submit</p>
+    <p>El atributo action sirve para indicar el nombre del controlador en el servidor</p>
+    <p>El atributo <code>name=""</code>de un input sirve para especificar el nombre del párametro a enviar al servidor</p>
+    <p>Esta página <a href="http://html5pattern.com/Phones">html5 patterns</a> esta muy bien para expresiones regulares para validar los input con los pattern</p>
+    <p></p>
+    <form action="#" method="POST">
+        <fieldset>
+            <legend>Datos personales</legend>
+            
+            <label for="nombre">Nombre</label><br>
+        <input  type="text" 
+                name="" id="nombre" 
+                placeholder="minimo 3 letras máximo 10"
+                required
+                autofocus
+                pattern=".{3,10}">
+ 
+        <br><br>
+
+        <label for="pass">Contraseña</label><br>
+        <input  type="password" 
+                name="pass" id="pass" 
+                placeholder="minimo 4 letras"
+                required
+                pattern=".{4,10}">
+            <button onclick="verTexto(event)">Ver</button>
+        <br><br>
+
+        <script>
+            function verTexto(e){
+                let ipass = document.querySelector('#pass');
+                let icontrasena = document.getElementById('pass');
+                console.log(ipass);
+                console.log(icontrasena);
+                e.preventDefault();
+                if(icontrasena.type == "text"){
+                    icontrasena.type = "password";
+                    e.target.innerHTML = 'Ver';
+                }
+                else {
+                    icontrasena.type = "text";
+                    e.target.innerHTML = 'Ocultar';
+                }
+               return false;
+            }
+        </script>
+
+        <label for="edad">Edad</label><br>
+        <!--step es para cada paso que das cuanto sube-->
+        <input type="number" name="edad" id="edad" 
+                required 
+                min="0"
+                max="99"
+                step="5" 
+                placeholder="Número de años (0-99)">
+        <br><br>
+        
+        <label for="sexo">Sexo</label>
+        <select name="sexo" id="sexo">
+            <option value="h">Hombre</option>
+            <option value="m">Mujer</option>
+            <option value="s" selected>Sin especificar</option>
+        </select>
+        </fieldset>
+        
+        <br><br>
+
+        <p>Con checkbox se pueden selecionar todos los deportes o ninguno</p>
+        <label for="deportes">Depeortes</label><br>
+        <input type="checkbox" name="deportes" id="deportes" value="1">Surf <br>
+        <input type="checkbox" name="deportes" id="deportes" value="2" checked>Quidditch <br>
+        <input type="checkbox" name="deportes" id="deportes" value="3">Jugger<br>
+        <input type="checkbox" name="deportes" id="deportes" value="4">Petanca<br>
+        <br><br>
+        
+        <p>Con radio hay que seleccionar o una u otra</p>
+        <label for="situacion">Situación actual</label><br>
+        <input type="radio" name="situacion" id="situacion" value="0">Trabajando <br>
+        <input type="radio" name="situacion" id="situacion" value="1" checked>En paro <br>
+        <br><br>
+        
+        <label for="observaciones">Observaciones</label><br>
+        <textarea   name="observaciones" id="observaciones" 
+                    cols="30" rows="10"
+                    placeholder="Tu opinión nos importa"></textarea>
+        <br><br>
+
+        <input type="submit" value="ENVIAR">
+    </form>
+
+    <p><small>La validación en front-end es meramente por usabilidad</small></p>
+    <p>Por eso la validación en servidor es obligatoria</p>
+
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="/pruebatecnica/css/styles.css">
+
+    <style>
+        body {
+            max-width: 1024px;
+            margin:auto;
+            background-color:#2196F3;
+        }
+        
+        form {
+            max-width:500px; ;
+            margin:2em auto;
+            border-radius: 5px;
+            box-shadow: #3598dc 0px 3px 3px;
+            padding: 2em;
+            background-color: white;
+        }
+
+        h1{
+            color:white;
+            margin:1em;
+        }
+            
+        input[type="text"],input[type="password"],select{
+            padding: 10px 0px 10px 10px;
+            width:70%;
+            background-color: #f2f2f2;
+            border:none;
+            border-radius: 3px;
+        }
+
+        input[type="text"],input[type="password"]:valid {
+            border:2px solid #9fc1f8; 
+        }
+
+        input[type="text"]:invalid,input[type="password"]{
+            border:2px solid rgba(255, 0, 0, 0.486); 
+        
+        } 
+
+        input[type="submit"]{
+            display: block;
+            margin:auto;
+            background-color: #3598dc;
+            color:white;
+            padding: 1em;
+            border: none;
+        }
+        
+        select{color:#777977;}
+        
+        select option{
+            padding: 5px;
+            line-height: 1em;
+        }
+        
+        .remember{color:#777977;font-size: 13.3333px;}
+        
+        #ver{
+            padding: 5px;
+            font-size: 20px;
+            color: #239af9;
+            border: none;
+            background: transparent;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>Login form</h1>
+    
+    <form action="#" method="POST">
+        
+     <!--    <label for="nombre">Usuario</label><br> -->
+        <input  type="text" 
+                name="nombre" id="nombre" 
+                placeholder="Usuario"
+                required
+                autofocus
+                pattern=".{3,10}">
+ 
+        <br><br>
+
+       <!--  <label for="pass">Contraseña</label><br> -->
+        <input  type="password" 
+                name="contrasena" id="contrasena" 
+                placeholder="Contraseña"
+                required
+                pattern=".{4,10}">
+            <button id="ver" onclick="verTexto(event)">☉</button>
+        <br><br>
+
+        <script>
+            function verTexto(e){
+                let ipass = document.querySelector('#contrasena');
+                let icontrasena = document.getElementById('contrasena');
+         
+                console.log(icontrasena);
+                e.preventDefault();
+                
+                if(icontrasena.type == "text"){
+                    icontrasena.type = "password";
+                    e.target.innerHTML = '☉';
+                }
+                else {
+                    icontrasena.type = "text";
+                    e.target.innerHTML = 'Ocultar';
+                }
+               
+               return false;
+            }
+        </script>
+
+        <!-- <label for="idioma">Idioma</label><br> -->
+        <select name="idioma" id="idioma" required placeholder="Elija idioma">
+            <option value="-1">Elija Idioma</option>
+            <option value="cas">Castellano</option>
+            <option value="eus">Euskera</option>
+            <option value="eng" >English</option>
+        </select>
+       
+        
+        <br><br>
+
+        <input type="checkbox" name="recuerdame" id="recuerdame" value="1"> 
+        <span class="remember">Recuérdame.</span> 
+       
+        <br><br>
+        
+       
+
+        <input type="submit" value="ENVIAR">
+    </form>
+
+    
+
+</body>
+</html>
