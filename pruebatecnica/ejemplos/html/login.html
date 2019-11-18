@@ -70,8 +70,8 @@
         #ver{
             color: #239af9;
             border: none;
-            background-repeat: no-repeat;
-            background-size: contain;
+            background-color: transparent;
+            font-size: 15px;
         }
     </style>
 
@@ -98,7 +98,7 @@
                 placeholder="Contraseña"
                 required
                 pattern=".{4,10}">
-            <button id="ver" onclick="verTexto(event)"> 
+            <button id="ver" onclick="verTexto(event)"> 👁
             </button>
         <br><br>
 
@@ -112,7 +112,7 @@
                 
                 if(icontrasena.type == "text"){
                     icontrasena.type = "password";
-                    e.target.innerHTML = 'Ver';
+                    e.target.innerHTML = '👁';
                 }
                 else {
                     icontrasena.type = "text";
